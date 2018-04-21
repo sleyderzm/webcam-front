@@ -1,0 +1,31 @@
+<div class="container">
+  <div>
+    <div class="col-md-4 col-md-offset-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">Please sign in</h3>
+        </div>
+        <div class="panel-body">
+          <form name="form" class="form-signin" (ngSubmit)="f.form.valid && login()" #f="ngForm">
+            <fieldset>
+              <div class="form-group">
+                <input type="text" class="form-control" name="email" [(ngModel)]="model.email" #email="ngModel" placeholder="Email Address" required autofocus="" />
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" name="password" placeholder="Password" [(ngModel)]="model.password" #password="ngModel" required=""/>
+              </div>
+              <div class="checkbox">
+                <label>
+                  <input name="remember" type="checkbox" value="Remember Me"> Remember Me
+                </label>
+              </div>
+              <div *ngIf="f.submitted && !email.valid" class="help-block">Email is required</div>
+              <div *ngIf="f.submitted && !password.valid" class="help-block">Password is required</div>
+              <input class="btn btn-lg btn-success btn-block" type="submit" value="Login">
+            </fieldset>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

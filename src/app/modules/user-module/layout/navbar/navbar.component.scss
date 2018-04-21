@@ -1,0 +1,76 @@
+.navbar {
+  margin-left: 220px !important;
+  background: #0b0c22;
+  color: #fff;
+}
+
+
+.icons {
+  position: absolute;
+  right: 30px;
+  font-size: 25px;
+}
+
+#custom-search-form {
+  margin:0;
+  margin-top: 3px;
+  margin-left: 40px;
+  padding: 0;
+}
+
+#custom-search-form .search-query {
+  padding-right: 3px;
+  padding-right: 4px \9;
+  padding-left: 3px;
+  padding-left: 4px \9;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 20px;
+  background: #0b0c22;
+  width: 600px;
+  padding: 7px 7px 7px 50px;
+  font-size: 12px;
+  border: 2px solid #d2d2d2;
+}
+
+#custom-search-form button {
+  border: 0;
+  background: none;
+  /** belows styles are working good */
+  padding: 2px 5px;
+  margin-top: 2px;
+  position: relative;
+  left: 40px;
+  /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  color: #d2d2d2;
+}
+
+.search-query:focus + button {
+  z-index: 3;
+}
+
+::placeholder {
+  color: #d2d2d2;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  color: #d2d2d2;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  color: #d2d2d2;
+}
+
+
+.icons > i {
+  margin-left: 20px;
+  padding-top: 10px;
+}
