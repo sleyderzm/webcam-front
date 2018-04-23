@@ -48,9 +48,9 @@ export class UserService {
     ).subscribe(
       response => {
         // login successful if there's a jwt token in the response
-        let user = Object.assign(new User(), response);
+        let user = Object.assign(new User(), response.user);
         if (user && user.id) {
-          user.token = btoa(data.email + ":" + data.password);
+          user.token = response.token;
           localStorage.setItem('currentUser', JSON.stringify(user));
           this.store.dispatch({type: SET_CURRENT_USER, payload: user});
           this.router.navigate(["/main"]);
